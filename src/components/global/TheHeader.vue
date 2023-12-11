@@ -1,21 +1,38 @@
 <template>
-  <header class="text-black">
-    <div class="container mx-auto py-4 px-4">
-      <div class="w-full flex col-span-1 sm:col-span-2 lg:col-span-2 justify-between">
-        <RouterLink to="/">
-          <h2 class="block text-2xl font-medium my-auto">HMaxWilson</h2>
-        </RouterLink>
-        <nav class="my-auto">
-          <ul class="flex flex-wrap justify-center sm:justify-end text-sm font-medium leading-5">
-            <li class="px-3 py-1 hover:font-bold"><RouterLink to="/">Home</RouterLink></li>
-            <li class="px-3 py-1 hover:font-bold"><RouterLink to="/about">About</RouterLink></li>
-          </ul>
-        </nav>
-      </div>
+  <header class="site clearfix">
+    <div class="col one">
+
+    </div>
+    <div class="col two">
+      <h4>591 Systems (tm) <br /> <b>H</b>euristically <b>E</b>ncrypted <b>R</b>ealtime <b>O</b>perating <b>S</b>ystem (HEROS)</h4>
+      <p>----------------------------------------</p>
+      <p>HEROS v 1.0.0</p>
+      <p>(c)2022 591 Industries</p>
+      <p>- Server 591 -</p>
     </div>
   </header>
 </template>
 
-<script setup>
-import { RouterLink } from 'vue-router'
-</script>
+<style scoped>
+header.site {
+  margin: 0 0 40px 0;
+  text-transform: uppercase;
+}
+.col.two {
+  width: auto;
+}
+#logo-v {
+  display: block;
+  height: auto;
+  margin: 0 auto;
+  width: 200px;
+}
+
+img.pip-hero {
+  display: block;
+  float: left;
+  height: auto;
+  margin: 5px 10px 5px 0;
+  width: 120px;
+}
+</style>

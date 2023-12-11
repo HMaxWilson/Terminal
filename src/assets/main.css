@@ -1,13 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323:wght@400;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 * {
-  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
 }
 
 html, body, #app{
   height: 100%;
+  background-color: #383838;
+  color: #00dd00;
+  font-size: 64.5%;
+  font-size: 1.4em;
+  font-family: 'VT323', Courier;
+  margin: 0;
+  padding: 0;
 }
 #app {
   display: flex;
@@ -16,4 +29,44 @@ html, body, #app{
 
 main{
   flex: 1;
+}
+
+h1, h2, h3 h4, h5, h6 {
+  font-weight: normal;
+  margin: 0;
+  text-transform: uppercase;
+}
+h4 b {
+  color: white;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+}
+
+p {
+  line-height: 100%;
+  margin: 0;
+}
+
+span { animation: blink 1s infinite }
+
+ul {
+  list-style: none;
+}
+
+ul a:before,
+p a:before {
+  color: #00dd00;
+  content: ' [ ';
+}
+
+ul a:after,
+p a:after {
+  color: #00dd00;
+  content: ' ] ';
 }
