@@ -40,10 +40,28 @@
   z-index: 2;
 }
 
+.expandingArea { position: relative }
+
+.scanline {
+  animation: scroll 10s 5s infinite;
+  background: -moz-linear-gradient(top,  rgba(0,221,0,0) 0%, rgba(0,221,0,1) 50%, rgba(0,221,0,0) 100%);
+  background: -webkit-linear-gradient(top,  rgba(0,221,0,0) 0%,rgba(0,221,0,1) 50%,rgba(0,221,0,0) 100%);
+  background: linear-gradient(to bottom,  rgba(0,221,0,0) 0%,rgba(0,221,0,1) 50%,rgba(0,221,0,0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0000dd00', endColorstr='#0000dd00',GradientType=0 );
+  display: block;
+  height: 20px;
+  opacity: 0.05;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -5%;
+  z-index: 2;
+}
+
 @keyframes flicker {
   0% { opacity: 0.15795 }
   5% { opacity: 0.31511 }
-  10% { opacity: 0.94554 }
+  10% { opacity: 0.55554 }
   15% { opacity: 0.2469 }
   20% { opacity: 0.62031 }
   25% { opacity: 0.0293 }

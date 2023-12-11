@@ -1,9 +1,8 @@
 <template>
   <nav class="site clear">
     <ul>
-      <li><a href="#" title="">Return Home</a></li>
-      <li><a href="#" title="">Our Clients</a></li>
-      <li><a href="#" title="">Contact Us</a></li>
+      <li><a href="/" title="">Home</a></li>
+      <li><a href="/about" title="">Misc</a></li>
     </ul>
   </nav>
 </template>
@@ -23,7 +22,7 @@ nav.site ul {
 nav.site ul li {
   display: inline-block;
   padding: 0 10px;
-  min-width: 250px;
+  min-width: 120px;
   width: auto;
 }
 </style>

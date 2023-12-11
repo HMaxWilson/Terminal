@@ -2,7 +2,6 @@
 import { RouterView } from 'vue-router'
 import Overlay from './components/global/TheOverlay.vue'
 import Header from './components/global/TheHeader.vue'
-import Footer from './components/global/TheFooter.vue'
 import Navbar from './components/global/TheNavbar.vue'
 </script>
 
@@ -13,23 +12,22 @@ import Navbar from './components/global/TheNavbar.vue'
       <Header />
       <Navbar />
 
-      <main class="container mx-auto pt-10 px-12 text-black text-center">
-        <RouterView />
+      <main>
+        <RouterView v-slot="{Component}">
+          <transition name="fade" mode="out-in">
+            <component :is="Component" :key="$route.path" />
+          </transition>
+        </RouterView>
       </main>
-
-      <Footer />
     </div>
   </div>
 </template>
 
-<style scoped>
+<style>
 .wrapper {
   animation: scroll 5s 1;
   margin: 0;
-  overflow: hidden;
   padding: 0;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
 }
 
 .content {
@@ -38,10 +36,24 @@ import Navbar from './components/global/TheNavbar.vue'
   padding: 40px;
   position: relative;
   width: 95%;
+  margin: 0 auto;
 }
 
 @keyframes scroll {
   0% { height: 0 }
   100% { height: 100%; }
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.8s;
+}
+.fade-enter-from, .fade-leave-to {
+  opacity: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    padding: 10px;
+  }
 }
 </style>
